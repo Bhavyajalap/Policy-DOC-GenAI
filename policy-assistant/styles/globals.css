@@ -1,0 +1,62 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f7f6f3;
+  --surface: #ffffff;
+  --surface2: #f2f1ee;
+  --border: rgba(0,0,0,0.10);
+  --border-md: rgba(0,0,0,0.18);
+  --text: #1a1917;
+  --text2: #5c5a56;
+  --text3: #9b9893;
+  --accent: #1a4fba;
+  --accent-bg: #edf2ff;
+  --accent-text: #1a4fba;
+  --danger: #c53030;
+  --danger-bg: #fff5f5;
+  --success-bg: #f0fff4;
+  --success-text: #276749;
+  --warn-bg: #fffbeb;
+  --warn-text: #92400e;
+  --radius: 10px;
+  --radius-sm: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111110;
+    --surface: #1c1c1a;
+    --surface2: #252523;
+    --border: rgba(255,255,255,0.09);
+    --border-md: rgba(255,255,255,0.16);
+    --text: #e8e6e1;
+    --text2: #9b9893;
+    --text3: #636059;
+    --accent: #6b9fff;
+    --accent-bg: #1a2540;
+    --accent-text: #91b4ff;
+    --danger: #fc8181;
+    --danger-bg: #2d1515;
+    --success-bg: #0f2a1a;
+    --success-text: #68d391;
+    --warn-bg: #2a1e0a;
+    --warn-text: #f6ad55;
+  }
+}
+
+html, body { height: 100%; }
+body {
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font-family: inherit; cursor: pointer; }
+textarea, input { font-family: inherit; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-md); border-radius: 99px; }
